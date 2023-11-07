@@ -1,0 +1,33 @@
+a {
+    padding: 5px;
+    font: normal larger 'Times New Roman', Times, serif; /* Shorthand for font-style, font-size, and font-family */
+    background-attachment: fixed; /* Assuming you want to fix the background to the viewport */
+    color: cadetblue; /* Soft, muted color for a professional appearance */
+    margin-right: 70px; /* Spacing to the right for better alignment */
+  }
+  
+  /* Header 1 styles for prominent, attention-grabbing titles */
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Modern, sans-serif typography for titles */
+    color: black; /* Classic color for strong contrast */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Shadow with offset and transparency for depth */
+    text-align: center; /* Center alignment for prominence */
+    font-size: 60px; /* Font size for large, readable titles */
+    font-style: oblique; /* Slight tilt for a dynamic effect */
+  }
+  
+  /* Horizontal rule styles for clear section separation */
+  hr {
+    border: none; /* Removes default border */
+    height: 2px; /* Sets the height of the HR */
+    background-color: black; /* Solid color for the HR for visibility */
+    margin: 20px 0; /* Adds vertical spacing before and after the HR */
+  }
+  
+  /* Navigation styles for a centered and clean navigation bar */
+  nav {
+    margin: auto; /* Horizontally centers the nav if it has a set width */
+    overflow: hidden; /* Clears floats inside the nav */
+    text-align: center; /* Ensures nav items are centered */
+  }
+  

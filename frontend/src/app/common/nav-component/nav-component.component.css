@@ -1,0 +1,58 @@
+/* Base styles for overall consistent look */
+body, button {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centered navigation container */
+.nav {
+    text-align: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+/* Individual navigation items for a clean and modern look */
+.nav-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* General button styling to make them stand out */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Active link styling for visual cue of the current page */
+.router-link-active {
+    border-bottom: 3px solid #007bff;
+}
+
+/* Logout button with a different color for distinction */
+button[mat-raised-button]:nth-child(3) {
+    background-color: #dc3545;
+}
+
+button[mat-raised-button]:nth-child(3):hover {
+    background-color: #c82333;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .nav-item {
+        display: block;
+        margin: 10px auto;
+    }
+}

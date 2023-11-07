@@ -1,0 +1,26 @@
+<div class="container">
+    <form (submit)="onlogin(loginform)" #loginform="ngForm" class="login-form">
+      <h2 class="form-title">Welcome Back!</h2>
+      <p class="form-instruction">Please login to your account.</p>
+  
+      <div class="input-wrapper">
+        <label for="userEmail" class="input-label">Email Address</label>
+        <input id="userEmail" type="email" placeholder="Enter your email" ngModel name="enterusername" required
+          pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" #enterusername="ngModel" class="input-field" />
+        <div *ngIf="enterusername.invalid" class="error-text">{{ emailError }}</div>
+      </div>
+  
+      <div class="input-wrapper">
+        <label for="userPassword" class="input-label">Password</label>
+        <input id="userPassword" [type]="showPassword ? 'text' : 'password'" placeholder="Enter your password" ngModel name="enterpassword" required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}" #enterpassword="ngModel" class="input-field" />
+        <div *ngIf="enterpassword.invalid" class="error-text">{{ passwordError }}</div>
+      </div>
+  
+      <div *ngIf="hasError" class="error-notification">{{ errorMessage }}</div>
+  
+      <button type="submit" class="submit-button">Login</button>
+      <p class="signup-invite">Don't have an account? <a [routerLink]="['/signup']" class="signup-link">Sign up now</a></p>
+    </form>
+  </div>
+  

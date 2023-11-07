@@ -1,0 +1,37 @@
+<section>
+    <mat-card>
+        <h4>Your Posts</h4>
+    </mat-card>
+</section>
+
+<mat-card *ngIf="posts.length === 0">
+    <h5>No Posts Found</h5>
+</mat-card>
+
+<mat-card *ngIf="!isLoggedIn" class="status">
+    <h5>[Error]: Please log in or sign up to view your posts.</h5>
+</mat-card>
+
+<mat-card *ngIf="isLoggedIn">
+    <mat-list>
+        <mat-list-item *ngFor="let post of posts">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ post.username }}</mat-card-title>
+                    <mat-card-subtitle>Department: {{ post.department }}</mat-card-subtitle>
+                    <mat-card-subtitle>Date: {{ post.date | date }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p [innerHTML]="post.postContent"></p>
+                </mat-card-content>
+
+                <mat-divider></mat-divider>
+
+                <mat-card-actions align="end">
+                    <button mat-button color="warn" (click)="onDelete(post._id)">Delete Post</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-list-item>
+    </mat-list>
+</mat-card>

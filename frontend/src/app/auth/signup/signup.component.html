@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Sign Up</h2>
+    <form (submit)="onsignup(signupForm)" #signupForm="ngForm">
+
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="email" id="username" placeholder="Email address" ngModel name="enterusername" required minlength="3"
+                maxlength="32" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" #enterusername="ngModel">
+            <div *ngIf="enterusername.invalid && enterusername.touched" class="error-message">{{ usernameError }}</div>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input [type]="showPassword ? 'text' : 'password'" id="password" placeholder="Password" ngModel name="enterpassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}"
+                #enterpassword="ngModel">
+            <div *ngIf="enterpassword.invalid && enterpassword.touched" class="error-message">{{ passwordError }}</div>
+        </div>
+
+        <div class="input-group">
+            <label for="department">Department:</label>
+            <select id="department" name="enteredDepartment" ngModel #enteredDepartment="ngModel" required>
+              <option value="">--Choose a Department--</option>
+              <option value="defense">Department of Defense</option>
+              <option value="education">Department of Education</option>
+              <option value="veteran_affairs">Department of Veteran Affairs</option>
+              <option value="housing_urban_development">Department of Housing & Urban Development</option>
+              <option value="transportation">Department of Transportation</option>
+              <option value="treasury">Department of Treasury</option>
+              <option value="health_services">Department of Health & Human Services</option>
+              <option value="cybersecurity">Department of Cybersecurity</option>
+              <option value="energy">Department of Energy</option>
+              <option value="environmental_protection">Department of Environmental Protection</option>
+            </select>
+            <div *ngIf="enteredDepartment.invalid && enteredDepartment.touched" class="error-message">
+              Choose a Department
+            </div>
+          </div>          
+
+        <div *ngIf="hasError" class="error-message">{{ errorMessage }}</div>
+
+        <button type="submit">Sign up</button>
+        <div class="navigation-link">
+            <p>Already have an account?  <a [routerLink]="['/']">Log In</a></p>
+        </div>
+    </form>
+</div>

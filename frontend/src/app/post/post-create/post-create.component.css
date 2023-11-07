@@ -1,0 +1,42 @@
+section {
+    margin-bottom: 16px; /* Adds spacing between sections for better visual separation */
+}
+
+mat-card {
+    display: block; /* Ensures mat-card is block-level for proper margin application */
+    text-align: center; /* Centers the text inside mat-card */
+    margin: 8px; /* Adds a little space around the card */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* align-content is not needed for a single-column flex layout */
+    justify-content: center;
+    width: 100%; /* Ensures form takes full container width */
+}
+
+mat-form-field {
+    margin: 8px;
+    width: 85%; /* You might want to use max-width here if you want a responsive max size */
+}
+
+h5 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+/* Additional styling to maintain consistency */
+header h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 16px 0; /* Adds padding to the top and bottom of the header */
+}
+
+/* Style for the button to ensure it stands out */
+button {
+    margin-top: 16px;
+}
+

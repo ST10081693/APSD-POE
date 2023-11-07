@@ -1,0 +1,30 @@
+section {
+    margin-bottom: 16px;
+}
+
+mat-card {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.status h5 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+mat-card-header {
+    align-items: center;
+}
+
+mat-card-content p {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+mat-card-actions {
+    padding: 8px;
+}
+
+mat-list-item {
+    margin-bottom: 16px;
+}

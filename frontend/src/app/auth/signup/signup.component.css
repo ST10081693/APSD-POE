@@ -1,0 +1,94 @@
+/* Container with a light and modern appearance, matching the login page */
+.container {
+    max-width: 460px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    color: #333;
+  }
+  
+  /* Input group styling for clear separation and alignment */
+  .input-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Consistent label styling with the login form */
+  label {
+    display: block;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input and select fields with a modern look */
+  input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Toggle password visibility icon */
+  .toggle-password {
+    cursor: pointer;
+    color: #007BFF;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    z-index: 2;
+  }
+  
+  /* Button styling for a uniform look across forms */
+  button {
+    padding: 0.75rem;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Error message styling for clear notification */
+  .error-message {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Navigation link for additional actions */
+  .navigation-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .navigation-link a {
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .navigation-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
